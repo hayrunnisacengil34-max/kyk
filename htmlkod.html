@@ -1,0 +1,51 @@
+<?php 
+include("config.php"); 
+?>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>KYK Otomasyon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Öğrenci Listesi</h2>
+
+<a href="ekle.php">➕ Öğrenci Ekle</a>
+
+
+   <?php
+include("config.php");
+
+$sonuc = $baglanti->
+?>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Oda</th>
+        <th>İşlem</th>
+    </tr>
+    <?php 
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['ad']; ?></td>
+            <td><?php echo $row['soyad']; ?></td>
+            <td><?php echo $row['oda_no']; ?></td>
+            <td>
+                <a href="sil.php?id=<?php echo $row['id']; ?>">❌ Sil</a>
+                <a href="giris.php?id=<?php echo $row['id']; ?>">🚪 Giriş</a>
+                <a href="cikis.php?id=<?php echo $row['id']; ?>">🏃 Çıkış</a>
+            </td>
+        </tr>
+    <?php }
+</table>
+
+</table>
+
+</body>
+</html>
